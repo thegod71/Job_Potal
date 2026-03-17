@@ -75,6 +75,12 @@ export const getAllJobs = async (req, res) => {
         success: false,
       });
     }
+    // .populate({
+    //     path: "company",
+    //   })  ya populate company ka under ja kr detials dega job ke sath kui ki hm jobpost krte time company ka id de rhe hote h aur company:{
+    //  type: mongoose.Schema.Types.ObjectId,
+    //  ref: "Company"
+    // }  ya job model hota hai
     return res.status(200).json({
       jobs,
       success: true,
